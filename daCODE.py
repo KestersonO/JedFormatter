@@ -18,6 +18,6 @@ values: list[str] = LDT[1::2]
 data = dict(zip(labels, values))
 
 # FDT - Formatted Data (As Text)
-FDT = f'{data["Author"]}. "{data["Article Title"]}." {data["Website Name"]}, {data["Publisher"]}, {data["Original Published Date"]}, Accessed {data["Date Accessed"]}.\n<{data["URL"]}>'
+FDT = f'{data["Author"]}. "{data["Article Title"]}." {data["Website Name"]}, {data["Publisher"]}, {data["Last Updated"]}, Accessed {data["Date Accessed"]}.\n<{data["URL"]}>'
 print("Heres your citation: \n" + FDT)
 
