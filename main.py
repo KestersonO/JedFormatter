@@ -27,7 +27,11 @@ if "www.history.com" in str(url): # ------ runs this for HISTORY.COM articles...
     print(f'{Heresthecitation}{AuthorsName}. \"{ArticleName}.\" {WebsiteName}. {Publisher}, {DateLastUpdate}. Web. Accessed {DateAccessed}.\n<{URL}>')
 elif "www.britannica.com" in str(url): # ------ runs this for BRITANNICA.COM articles... -----
     nst2 = soupedtext.find_all("div", attrs={"class": "citation font-serif border rounded p-15 mt-20"})
-    print(nst2)
+    nst3 = []
+    for element in nst2:
+        text = element.get_text()
+        nst3.append(text)
+    
 
 
 
